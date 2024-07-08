@@ -1,1 +1,1 @@
-# CRL_MICCAI_2024
+# Contrast Representation Learning from Imaging Parameters for Magnetic Resonance Image Synthesis
