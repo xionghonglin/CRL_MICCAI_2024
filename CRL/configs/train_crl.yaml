@@ -2,13 +2,13 @@ train_dataset:
   dataset:
     name: paired-image-folders
     args:
-      root_path_1: ../data/data_multi_slice/test/1
-      root_path_2: ../data/data_multi_slice/test/2
-      root_path_3: ../data/data_multi_slice/test/3
-      root_path_4: ../data/data_multi_slice/test/5
-      root_path_5: ../data/data_multi_slice/test/7
-      root_path_6: ../data/data_multi_slice/test/8
-      root_path_7: ../data/data_multi_slice/test/9
+      root_path_1: ../data/data_multi_slice/train/1
+      root_path_2: ../data/data_multi_slice/train/2
+      root_path_3: ../data/data_multi_slice/train/3
+      root_path_4: ../data/data_multi_slice/train/5
+      root_path_5: ../data/data_multi_slice/train/7
+      root_path_6: ../data/data_multi_slice/train/8
+      root_path_7: ../data/data_multi_slice/train/9
       repeat: 16
       cache: in_memory
   wrapper:
