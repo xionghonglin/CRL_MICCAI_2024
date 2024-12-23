@@ -37,7 +37,6 @@ class crl(nn.Module):
         else:
             latent_content = feat_src/code_src.unsqueeze(-1).unsqueeze(-1)
             feat_tgt = latent_content*code_tgt.unsqueeze(-1).unsqueeze(-1)
-        pred_label = self.imnet(latent_content.permute(0,2,3,1)).permute(0,3,1,2)    
         
         pred_tgt = self.imnet(feat_tgt.permute(0,2,3,1)).permute(0,3,1,2)    
                 
