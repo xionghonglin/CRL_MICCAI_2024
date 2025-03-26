@@ -69,7 +69,7 @@ class ResNet(nn.Module):
 
 
 @register('ResNet-16-64')
-def make_edsr_baseline(n_resblocks=16, n_feats=64, res_scale=1, rgb_range=1):
+def make_encoder(n_resblocks=16, n_feats=64, res_scale=1, rgb_range=1):
     args = Namespace()
     args.n_resblocks = n_resblocks
     args.n_feats = n_feats
@@ -79,7 +79,7 @@ def make_edsr_baseline(n_resblocks=16, n_feats=64, res_scale=1, rgb_range=1):
     return ResNet(args)
 
 @register('ResNet-24-128')
-def make_edsr_baseline(n_resblocks=24, n_feats=128, res_scale=1, rgb_range=1):
+def make_encoder(n_resblocks=24, n_feats=128, res_scale=1, rgb_range=1):
     args = Namespace()
     args.n_resblocks = n_resblocks
     args.n_feats = n_feats
@@ -89,7 +89,7 @@ def make_edsr_baseline(n_resblocks=24, n_feats=128, res_scale=1, rgb_range=1):
     return ResNet(args)
 
 @register('ResNet-32-256')
-def make_edsr_baseline(n_resblocks=32, n_feats=256, res_scale=0.1, rgb_range=1):
+def make_encoder(n_resblocks=32, n_feats=256, res_scale=0.1, rgb_range=1):
     args = Namespace()
     args.n_resblocks = n_resblocks
     args.n_feats = n_feats
