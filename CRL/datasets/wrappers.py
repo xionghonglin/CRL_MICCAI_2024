@@ -6,7 +6,7 @@ from datasets import register
 import matplotlib.pyplot as plt
 
 
-@register('sr-implicit-paired')
+@register('paired')
 class SRImplicitPaired(Dataset):
 
     def __init__(self, dataset, inp_size=None, augment=False):
