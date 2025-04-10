@@ -12,9 +12,9 @@ class crl(nn.Module):
     def __init__(self, encoder_spec, imnet_spec=None):
         super().__init__()
         self.encoder = models.make(encoder_spec)
-        channel_num = self.encoder.out_dim
-        self.codemapping_mlp = Linear(in_dim=3, out_dim=channel_num, hidden_list = [channel_num, channel_num, channel_num, channel_num])     
-        self.cross_attn = CrossAttention(channel_num, 8)
+        f_dim = self.encoder.out_dim
+        self.codemapping_mlp = Linear(in_dim=3, out_dim=f_dim, hidden_list = [f_dim, f_dim, f_dim, f_dim])     
+        self.cross_attn = CrossAttention(f_dim, 8)
         if imnet_spec is not None:
             imnet_in_dim = self.encoder.out_dim
             self.imnet = models.make(imnet_spec, args={'in_dim': imnet_in_dim})
