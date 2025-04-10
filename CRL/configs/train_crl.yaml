@@ -48,8 +48,6 @@ model:
     encoder_spec:
       name: ResNet-32-256
       args:
-        no_upsampling: true
-      args:
         res_scale: 0.1
     imnet_spec:
       name: mlp
