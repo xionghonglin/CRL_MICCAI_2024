@@ -12,7 +12,7 @@ train_dataset:
       repeat: 16
       cache: in_memory
   wrapper:
-    name: sr-implicit-paired
+    name: paired
     args:
       inp_size: 64
       augment: true
@@ -35,7 +35,7 @@ val_dataset:
       repeat: 1
       cache: in_memory
   wrapper:
-    name: sr-implicit-paired
+    name: paired
     args:
       inp_size: 
       
